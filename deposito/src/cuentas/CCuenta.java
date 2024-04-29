@@ -1,6 +1,9 @@
 package cuentas;
 public class CCuenta {
 
+/**Representación de una cuenta corriente
+ * @author Victor Manuel
+ */
 
     private String nombre;
     private String cuenta;
@@ -18,7 +21,10 @@ public class CCuenta {
         saldo=sal;
     }
 
-    
+    /**
+     * Obtiene el nombre
+     * @return el nombre del titular
+     */
     
     public String getNombre() {
 		return nombre;
@@ -28,6 +34,10 @@ public class CCuenta {
 		this.nombre = nombre;
 	}
 
+	/**
+	 * Obtiene el numero de cuenta
+	 * @return el numero de cuenta
+	 */
 	public String getCuenta() {
 		return cuenta;
 	}
@@ -35,7 +45,10 @@ public class CCuenta {
 	public void setCuenta(String cuenta) {
 		this.cuenta = cuenta;
 	}
-
+/**
+ * Obtiene el saldo actual de la cuenta
+ * @return saldo actual de la cuenta
+ */
 	public double getSaldo() {
 		return saldo;
 	}
@@ -44,6 +57,10 @@ public class CCuenta {
 		this.saldo = saldo;
 	}
 
+	/**
+	 * Obtiene el interes de la cuenta
+	 * @return el tipo de interes de la cuenta
+	 */
 	public double getTipoInterés() {
 		return tipoInterés;
 	}
@@ -52,11 +69,21 @@ public class CCuenta {
 		this.tipoInterés = tipoInterés;
 	}
 
+	/**
+	 * Devuelve el estado de la cuenta
+	 * @return saldo de la cuenta
+	 */
 	public double estado()
     {
         return saldo;
     }
 
+	
+	/**
+	 * Ingresa una cantidad en la cuenta
+	 * @param cantidad cantidad a ingresar
+	 * @throws Exception cantidad es negativa
+	 */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
@@ -64,6 +91,11 @@ public class CCuenta {
         saldo = saldo + cantidad;
     }
 
+    /**
+     * Retira una cantidad
+     * @param cantidad cantidad a retirar
+     * @throws Exception si cantidad es insuficiente o negativa
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
